@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoMuse | Buy Tickets</title>
+    <script src="../static/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <p class="site-tagline">Art × Technology</p>
+        </header>
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a href="visit.html">Visit</a>
+            <button type="button" class="nav_toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+        </nav>
+        <main class="main">
+            <h1>Buy Tickets</h1>
+            <h2>Pricing</h2>
+            <table>
+                <tr>
+                    <th>Ticket Type</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Adult</td>
+                    <td>General admission for ages 18+. Under 18 free of charge.</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>Student ID required.</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Member</td>
+                    <td>Member ID required.</td>
+                    <td>$15</td>
+                </tr>
+            </table>
+
+            <h2>March 2026 — Available dates</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Session</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Sat, Mar 28, 2026</td>
+                    <td>10:00 AM – 2:00 PM</td>
+                    <td><button type="button" class="btn-buy" onclick="showTicketForm('2026-03-28')">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>Sun, Mar 29, 2026</td>
+                    <td>12:00 PM – 4:00 PM</td>
+                    <td><button type="button" class="btn-buy" onclick="showTicketForm('2026-03-29')">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>Sat, Apr 4, 2026</td>
+                    <td>10:00 AM – 2:00 PM</td>
+                    <td><button type="button" class="btn-buy" onclick="showTicketForm('2026-04-04')">Buy Now</button></td>
+                </tr>
+            </table>
+
+            <form id="ticketPurchaseForm" action="#" method="get">
+                <h2>Purchase</h2>
+                <p>Complete the form for the date you selected (use Buy Now above).</p>
+                <label>
+                    Name (required):
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    Email (required):
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Number of tickets (required):
+                    <input type="number" name="quantity" min="1" required>
+                </label>
+                <label>
+                    Selected date:
+                    <input type="text" name="selectedDate" id="selectedDate" readonly>
+                </label>
+                <p>
+                    <button type="button" onclick="submitTicketPurchase()">Submit</button>
+                </p>
+            </form>
+        </main>
+        <figure class="main_figure">
+            <img id="logo" src="../static/monomuse-logo.svg" alt="MonoMuse Museum Logo">
+        </figure>
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>

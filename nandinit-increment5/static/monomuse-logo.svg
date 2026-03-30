@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" role="img" aria-labelledby="title desc">
+  <title id="title">MonoMuse Logo</title>
+  <desc id="desc">Wordmark for MonoMuse with abstract museum icon.</desc>
+  <rect width="360" height="120" fill="#101820"/>
+  <g transform="translate(24,24)">
+    <rect x="0" y="0" width="72" height="72" rx="10" fill="#22d3ee"/>
+    <path d="M12 54V18h10l14 20 14-20h10v36h-9V32L36 50 21 32v22z" fill="#101820"/>
+  </g>
+  <text x="112" y="58" font-family="Roboto, Arial, sans-serif" font-size="34" font-weight="700" fill="#f8fafc">
+    MonoMuse
+  </text>
+  <text x="113" y="84" font-family="Roboto, Arial, sans-serif" font-size="14" fill="#cbd5e1">
+    Art x Technology
+  </text>
+</svg>

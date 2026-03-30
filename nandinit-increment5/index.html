@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse | Home</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="./static/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <p class="site-tagline">Art × Technology</p>
+        </header>
+        <nav class="nav_bar">
+            <a href="index.html">Home</a>
+            <a href="views/explore.html">Explore</a>
+            <a href="views/exhibitions.html">Exhibitions</a>
+            <a href="views/tickets.html">Buy Tickets</a>
+            <a href="views/visit.html">Visit</a>
+            <button type="button" class="nav_toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+        </nav>
+        <main class="main">
+            <h2 id="greeting">Welcome to the MonoMuse Museum</h2>
+            <p>
+                MonoMuse is a contemporary museum dedicated to exploring the intersection of art,
+                technology, and human creativity.
+            </p>
+            <p id="shortIntro">
+                Plan your visit to experience cutting-edge exhibitions and hands-on experiences.
+            </p>
+            <p id="longIntro">
+                Through immersive exhibitions, interactive installations, and rotating collections,
+                MonoMuse invites visitors to discover how digital innovation is transforming the way we
+                create, experience, and understand art. Whether you are a first-time visitor or a
+                returning member, our exhibitions offer new perspectives on the role of technology in
+                culture and everyday life.
+            </p>
+            <p class="read-more-actions">
+                <button type="button" id="readMore" class="btn">Read More</button>
+                <button type="button" id="readLess" class="btn btn-secondary">Read Less</button>
+            </p>
+            <p>
+                <a class="cta-link" href="views/tickets.html">Buy Tickets</a>
+            </p>
+        </main>
+        <figure class="main_figure">
+            <img id="logo" src="./static/monomuse-logo.svg" alt="MonoMuse Museum Logo">
+        </figure>
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>

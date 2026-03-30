@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoMuse | Visit</title>
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <p class="site-tagline">Art × Technology</p>
+        </header>
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a href="visit.html">Visit</a>
+            <button type="button" class="nav_toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+        </nav>
+        <main class="main">
+            <h1>Visit MonoMuse</h1>
+            <p>
+                Plan your visit to experience interactive exhibitions, digital art, and creative events.
+                We recommend booking tickets in advance to guarantee your preferred time slot.
+            </p>
+            <p>
+                Hours: Tue-Sun, 10:00 AM-6:00 PM<br>
+                Location: 123 Innovation Ave, Pittsburgh, PA
+            </p>
+        </main>
+        <figure class="main_figure">
+            <img id="logo" src="../static/monomuse-logo.svg" alt="MonoMuse Museum Logo">
+        </figure>
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>
