@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MonoMuse | Visit</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <title>MonoMuse | Order confirmation</title>
     <script src="../static/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,21 +27,12 @@
             <button type="button" class="nav_toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
         </nav>
         <main class="main" id="main-content">
-            <h1>Visit MonoMuse</h1>
-            <p>
-                Plan your visit to experience interactive exhibitions, digital art, and creative events.
-                We recommend booking tickets in advance to guarantee your preferred time slot.
+            <h1>Thank you — order received</h1>
+            <p id="confirmationMessage" class="confirmation-message" role="status" aria-live="polite">
+                Your simulated order is confirmed. No payment was processed.
             </p>
-            <p>
-                <strong>Hours:</strong> Tue–Sun, 10:00 AM–6:00 PM<br>
-                <strong>Location:</strong> 123 Innovation Ave, Pittsburgh, PA
-            </p>
-            <p><a href="tickets.html">Buy tickets</a> · <a href="checkout.html">Go to checkout</a></p>
-
-            <h2>Find us</h2>
-            <p>Interactive map powered by Leaflet with OpenStreetMap tiles.</p>
-            <div id="map" class="map" aria-label="Map showing museum location"></div>
-            <p class="attribution attribution--inline">Map data © OpenStreetMap contributors (see on-map attribution).</p>
+            <p id="confirmationTotal" class="confirmation-total" aria-live="polite"></p>
+            <p><a href="tickets.html">Return to ticket information</a> or <a href="../index.html">go to the homepage</a>.</p>
         </main>
         <figure class="main_figure">
             <img id="logo" src="../static/monomuse-logo.svg" alt="MonoMuse Museum logo mark">
@@ -51,10 +40,12 @@
         <footer class="footer">
             <div class="visitor-info">
                 <h2 class="footer-heading">Visitor information</h2>
-                <p><strong>Contact:</strong> <a href="mailto:hello@monomuse.example">hello@monomuse.example</a> · <a href="tel:+14125550199">(412) 555-0199</a></p>
+                <p><strong>Hours:</strong> Tue–Sun, 10:00 AM–6:00 PM</p>
+                <p><strong>Location:</strong> 123 Innovation Ave, Pittsburgh, PA</p>
+                <p><strong>Contact:</strong> <a href="mailto:hello@monomuse.example">hello@monomuse.example</a></p>
             </div>
             <p id="copyYear"></p>
-            <p class="attribution">Leaflet: leafletjs.com · Tiles: OpenStreetMap · Fonts: Google Fonts (Roboto).</p>
+            <p class="attribution">Map tiles: © OpenStreetMap contributors. Video: YouTube. Fonts: Google Fonts (Roboto).</p>
         </footer>
     </div>
 </body>

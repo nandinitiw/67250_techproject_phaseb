@@ -11,97 +11,91 @@
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="container">
         <header class="header">
             <p class="site-tagline">Art × Technology</p>
         </header>
-        <nav class="nav_bar">
+        <nav class="nav_bar" aria-label="Primary navigation">
             <a href="../index.html">Home</a>
             <a href="explore.html">Explore</a>
             <a href="exhibitions.html">Exhibitions</a>
             <a href="tickets.html">Buy Tickets</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="membership.html">Support</a>
             <a href="visit.html">Visit</a>
             <button type="button" class="nav_toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
         </nav>
-        <main class="main">
+        <main class="main" id="main-content">
             <h1>Buy Tickets</h1>
-            <h2>Pricing</h2>
+            <p>
+                Review pricing and upcoming sessions below, then continue to
+                <a href="checkout.html">secure checkout</a> to choose your visit date, ticket type, and quantity.
+            </p>
+
+            <h2>Pricing overview</h2>
+            <p>For the course checkout simulation, every ticket is billed at <strong>$18</strong> regardless of type. Types still appear at checkout for realism.</p>
             <table>
+                <caption class="visually-hidden">Ticket types and descriptions</caption>
                 <tr>
-                    <th>Ticket Type</th>
-                    <th>Description</th>
-                    <th>Price</th>
+                    <th scope="col">Ticket Type</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Listed price</th>
                 </tr>
                 <tr>
-                    <td>Adult</td>
-                    <td>General admission for ages 18+. Under 18 free of charge.</td>
+                    <td>General</td>
+                    <td>General admission for ages 18+.</td>
                     <td>$18</td>
                 </tr>
                 <tr>
                     <td>Student</td>
-                    <td>Student ID required.</td>
-                    <td>$10</td>
+                    <td>Student ID required at entry.</td>
+                    <td>$18</td>
                 </tr>
                 <tr>
                     <td>Member</td>
-                    <td>Member ID required.</td>
-                    <td>$15</td>
+                    <td>Member ID required at entry.</td>
+                    <td>$18</td>
                 </tr>
             </table>
 
-            <h2>March 2026 — Available dates</h2>
+            <h2>March 2026 — Available sessions</h2>
             <table>
+                <caption class="visually-hidden">Upcoming ticket dates</caption>
                 <tr>
-                    <th>Date</th>
-                    <th>Session</th>
-                    <th>Action</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Session</th>
+                    <th scope="col">Next step</th>
                 </tr>
                 <tr>
                     <td>Sat, Mar 28, 2026</td>
                     <td>10:00 AM – 2:00 PM</td>
-                    <td><button type="button" class="btn-buy" onclick="showTicketForm('2026-03-28')">Buy Now</button></td>
+                    <td><a class="btn-buy" href="checkout.html">Continue to checkout</a></td>
                 </tr>
                 <tr>
                     <td>Sun, Mar 29, 2026</td>
                     <td>12:00 PM – 4:00 PM</td>
-                    <td><button type="button" class="btn-buy" onclick="showTicketForm('2026-03-29')">Buy Now</button></td>
+                    <td><a class="btn-buy" href="checkout.html">Continue to checkout</a></td>
                 </tr>
                 <tr>
                     <td>Sat, Apr 4, 2026</td>
                     <td>10:00 AM – 2:00 PM</td>
-                    <td><button type="button" class="btn-buy" onclick="showTicketForm('2026-04-04')">Buy Now</button></td>
+                    <td><a class="btn-buy" href="checkout.html">Continue to checkout</a></td>
                 </tr>
             </table>
-
-            <form id="ticketPurchaseForm" action="#" method="get">
-                <h2>Purchase</h2>
-                <p>Complete the form for the date you selected (use Buy Now above).</p>
-                <label>
-                    Name (required):
-                    <input type="text" name="name" required>
-                </label>
-                <label>
-                    Email (required):
-                    <input type="email" name="email" required>
-                </label>
-                <label>
-                    Number of tickets (required):
-                    <input type="number" name="quantity" min="1" required>
-                </label>
-                <label>
-                    Selected date:
-                    <input type="text" name="selectedDate" id="selectedDate" readonly>
-                </label>
-                <p>
-                    <button type="button" onclick="submitTicketPurchase()">Submit</button>
-                </p>
-            </form>
         </main>
         <figure class="main_figure">
-            <img id="logo" src="../static/monomuse-logo.svg" alt="MonoMuse Museum Logo">
+            <img id="logo" src="../static/monomuse-logo.svg" alt="MonoMuse Museum logo mark">
         </figure>
         <footer class="footer">
+            <div class="visitor-info">
+                <h2 class="footer-heading">Visitor information</h2>
+                <p><strong>Hours:</strong> Tue–Sun, 10:00 AM–6:00 PM</p>
+                <p><strong>Location:</strong> 123 Innovation Ave, Pittsburgh, PA</p>
+                <p><strong>Contact:</strong> <a href="mailto:hello@monomuse.example">hello@monomuse.example</a></p>
+            </div>
             <p id="copyYear"></p>
+            <p class="attribution">Fonts: Google Fonts (Roboto).</p>
         </footer>
     </div>
 </body>

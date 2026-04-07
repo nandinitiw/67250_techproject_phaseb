@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="t1">
+  <title id="t1">Abstract digital art installation with cyan geometric shapes</title>
+  <rect width="800" height="500" fill="#101820"/>
+  <circle cx="400" cy="250" r="120" fill="#22d3ee" opacity="0.85"/>
+  <rect x="120" y="160" width="200" height="200" rx="12" fill="#92ad70" opacity="0.7"/>
+  <path d="M520 340 L680 120 L720 380 Z" fill="#cfe6b2" opacity="0.55"/>
+</svg>

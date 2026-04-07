@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Your name">
-    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="author" content="Nandini Tiwari">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems, MonoMuse">
     <meta name="description" content="MonoMuse website redesign project">
     <title>MonoMuse | Home</title>
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
@@ -15,20 +15,23 @@
     <link rel="stylesheet" href="./static/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="container">
         <header class="header">
             <p class="site-tagline">Art × Technology</p>
         </header>
-        <nav class="nav_bar">
+        <nav class="nav_bar" aria-label="Primary navigation">
             <a href="index.html">Home</a>
             <a href="views/explore.html">Explore</a>
             <a href="views/exhibitions.html">Exhibitions</a>
             <a href="views/tickets.html">Buy Tickets</a>
+            <a href="views/checkout.html">Checkout</a>
+            <a href="views/membership.html">Support</a>
             <a href="views/visit.html">Visit</a>
             <button type="button" class="nav_toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
         </nav>
-        <main class="main">
-            <h2 id="greeting">Welcome to the MonoMuse Museum</h2>
+        <main class="main" id="main-content">
+            <h1><span id="greeting" aria-live="polite"></span> Welcome to the MonoMuse Museum</h1>
             <p>
                 MonoMuse is a contemporary museum dedicated to exploring the intersection of art,
                 technology, and human creativity.
@@ -48,14 +51,23 @@
                 <button type="button" id="readLess" class="btn btn-secondary">Read Less</button>
             </p>
             <p>
-                <a class="cta-link" href="views/tickets.html">Buy Tickets</a>
+                <a class="cta-link" href="views/tickets.html">View ticket prices and dates</a>
+                ·
+                <a class="cta-link" href="views/checkout.html">Go to ticket checkout</a>
             </p>
         </main>
         <figure class="main_figure">
-            <img id="logo" src="./static/monomuse-logo.svg" alt="MonoMuse Museum Logo">
+            <img id="logo" src="./static/monomuse-logo.svg" alt="MonoMuse Museum logo mark">
         </figure>
         <footer class="footer">
+            <div class="visitor-info">
+                <h2 class="footer-heading">Visitor information</h2>
+                <p><strong>Hours:</strong> Tue–Sun, 10:00 AM–6:00 PM</p>
+                <p><strong>Location:</strong> 123 Innovation Ave, Pittsburgh, PA</p>
+                <p><strong>Contact:</strong> <a href="mailto:hello@monomuse.example">Email MonoMuse</a> · <a href="tel:+14125550199">Call (412) 555-0199</a></p>
+            </div>
             <p id="copyYear"></p>
+            <p class="attribution">Video (Exhibitions): YouTube embed via IFrame API. Map (Visit): © OpenStreetMap / Leaflet. Fonts: Google Fonts (Roboto).</p>
         </footer>
     </div>
 </body>

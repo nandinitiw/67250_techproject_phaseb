@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="t3">
+  <title id="t3">Museum gallery wall with framed abstract panels</title>
+  <rect width="800" height="500" fill="#0b0b0c"/>
+  <rect x="80" y="100" width="640" height="300" rx="8" fill="#1a1d23" stroke="#2e2f35"/>
+  <rect x="120" y="140" width="160" height="220" fill="#111317" stroke="#3a3f4a"/>
+  <rect x="320" y="140" width="160" height="220" fill="#151820" stroke="#3a3f4a"/>
+  <rect x="520" y="140" width="160" height="220" fill="#14161b" stroke="#3a3f4a"/>
+  <rect x="140" y="180" width="120" height="80" fill="#22d3ee" opacity="0.6"/>
+  <rect x="340" y="200" width="120" height="120" fill="#92ad70" opacity="0.55"/>
+  <rect x="540" y="170" width="120" height="100" fill="#cfe6b2" opacity="0.45"/>
+</svg>

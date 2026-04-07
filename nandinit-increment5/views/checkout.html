@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=tickets.html">
-    <title>MonoMuse | Checkout</title>
+    <title>MonoMuse | Ticket checkout</title>
     <script src="../static/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,28 +11,83 @@
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="container">
         <header class="header">
             <p class="site-tagline">Art × Technology</p>
         </header>
-        <nav class="nav_bar">
+        <nav class="nav_bar" aria-label="Primary navigation">
             <a href="../index.html">Home</a>
             <a href="explore.html">Explore</a>
             <a href="exhibitions.html">Exhibitions</a>
             <a href="tickets.html">Buy Tickets</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="membership.html">Support</a>
             <a href="visit.html">Visit</a>
             <button type="button" class="nav_toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
         </nav>
-        <main class="main">
-            <h1>Checkout</h1>
-            <p>Purchasing has moved to the Buy Tickets page.</p>
-            <p><a href="tickets.html">Go to Buy Tickets</a></p>
+        <main class="main" id="main-content">
+            <h1>Ticket checkout</h1>
+            <p>Complete your order below. All tickets are <strong>$18</strong> each for this simulated checkout (per course specification).</p>
+
+            <form id="checkoutForm" class="checkout-form" novalidate>
+                <fieldset>
+                    <legend>Visit details</legend>
+
+                    <label for="visitDate">Visit date <span class="req" aria-hidden="true">*</span></label>
+                    <input type="date" id="visitDate" name="visitDate" required aria-required="true" aria-describedby="err-visitDate">
+                    <p class="field-error" id="err-visitDate" role="alert" aria-live="polite"></p>
+
+                    <p class="fieldset-label">Ticket type <span class="req" aria-hidden="true">*</span></p>
+                    <div class="radio-group" role="radiogroup" aria-describedby="err-ticketType">
+                        <label><input type="radio" name="ticketType" value="general" required> General</label>
+                        <label><input type="radio" name="ticketType" value="student"> Student</label>
+                        <label><input type="radio" name="ticketType" value="member"> Member</label>
+                    </div>
+                    <p class="field-error" id="err-ticketType" role="alert" aria-live="polite"></p>
+
+                    <label for="quantity">Number of tickets (1–10) <span class="req" aria-hidden="true">*</span></label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" step="1" value="1" required aria-required="true" aria-describedby="err-quantity priceLine">
+                    <p class="field-error" id="err-quantity" role="alert" aria-live="polite"></p>
+
+                    <p class="order-total" id="priceLine" aria-live="polite">Order total: <strong id="orderTotalDisplay">$18.00</strong></p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact</legend>
+
+                    <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" required autocomplete="email" aria-required="true" aria-describedby="err-email">
+                    <p class="field-error" id="err-email" role="alert" aria-live="polite"></p>
+
+                    <label for="zip">ZIP code (optional)</label>
+                    <input type="text" id="zip" name="zip" inputmode="numeric" maxlength="5" aria-describedby="err-zip zip-hint">
+                    <p class="hint" id="zip-hint">If provided, enter exactly five digits.</p>
+                    <p class="field-error" id="err-zip" role="alert" aria-live="polite"></p>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="mailingList" name="mailingList" value="yes">
+                        Join our mailing list for exhibition updates
+                    </label>
+                </fieldset>
+
+                <p>
+                    <button type="submit" class="btn">Place Order</button>
+                </p>
+            </form>
         </main>
         <figure class="main_figure">
-            <img id="logo" src="../static/monomuse-logo.svg" alt="MonoMuse Museum Logo">
+            <img id="logo" src="../static/monomuse-logo.svg" alt="MonoMuse Museum logo mark">
         </figure>
         <footer class="footer">
+            <div class="visitor-info">
+                <h2 class="footer-heading">Visitor information</h2>
+                <p><strong>Hours:</strong> Tue–Sun, 10:00 AM–6:00 PM</p>
+                <p><strong>Location:</strong> 123 Innovation Ave, Pittsburgh, PA</p>
+                <p><strong>Contact:</strong> <a href="mailto:hello@monomuse.example">hello@monomuse.example</a> · <a href="tel:+14125550199">(412) 555-0199</a></p>
+            </div>
             <p id="copyYear"></p>
+            <p class="attribution">Map tiles: © OpenStreetMap contributors. Video: embedded via YouTube. Fonts: Google Fonts (Roboto).</p>
         </footer>
     </div>
 </body>

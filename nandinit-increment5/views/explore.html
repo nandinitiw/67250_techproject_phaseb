@@ -11,21 +11,36 @@
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="container">
         <header class="header">
             <p class="site-tagline">Art × Technology</p>
         </header>
-        <nav class="nav_bar">
+        <nav class="nav_bar" aria-label="Primary navigation">
             <a href="../index.html">Home</a>
             <a href="explore.html">Explore</a>
             <a href="exhibitions.html">Exhibitions</a>
             <a href="tickets.html">Buy Tickets</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="membership.html">Support</a>
             <a href="visit.html">Visit</a>
             <button type="button" class="nav_toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
         </nav>
-        <main class="main">
+        <main class="main" id="main-content">
             <h1>Explore</h1>
             <p>Explore the world of art and technology at MonoMuse. Our exhibitions showcase the latest in digital innovation, interactive installations, and cutting-edge art. Discover how technology is transforming the way we create, experience, and understand art. Founded in 2020, we serve all patrons of art and technology.</p>
+
+            <h2>Gallery highlights</h2>
+            <p>Use the previous and next controls to browse sample works (decorative SVGs for this project).</p>
+            <div class="slideshow" aria-roledescription="carousel">
+                <p class="slideshow-caption" id="slideshowCaption"></p>
+                <img id="slideshowImage" class="slideshow-image" src="../static/gallery-1.svg" alt="Abstract digital art installation with cyan geometric shapes">
+                <div class="slideshow-controls">
+                    <button type="button" class="btn btn-secondary" id="slideshowPrev">Previous image</button>
+                    <button type="button" class="btn" id="slideshowNext">Next image</button>
+                </div>
+            </div>
+
             <h2>Milestones</h2>
             <ul>
                 <li>2020: MonoMuse opens its doors</li>
@@ -35,10 +50,16 @@
             </ul>
         </main>
         <figure class="main_figure">
-            <img id="logo" src="../static/monomuse-logo.svg" alt="MonoMuse Museum Logo">
+            <img id="logo" src="../static/monomuse-logo.svg" alt="MonoMuse Museum logo mark">
         </figure>
         <footer class="footer">
+            <div class="visitor-info">
+                <h2 class="footer-heading">Visitor information</h2>
+                <p><strong>Hours:</strong> Tue–Sun, 10:00 AM–6:00 PM</p>
+                <p><strong>Gallery images:</strong> Original SVG illustrations for MonoMuse (course project).</p>
+            </div>
             <p id="copyYear"></p>
+            <p class="attribution">Fonts: Google Fonts (Roboto).</p>
         </footer>
     </div>
 </body>

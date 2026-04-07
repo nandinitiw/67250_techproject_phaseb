@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoMuse | Membership &amp; donation</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="../static/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="container">
+        <header class="header">
+            <p class="site-tagline">Art × Technology</p>
+        </header>
+        <nav class="nav_bar" aria-label="Primary navigation">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="membership.html">Support</a>
+            <a href="visit.html">Visit</a>
+            <button type="button" class="nav_toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+        </nav>
+        <main class="main" id="main-content">
+            <h1>Support MonoMuse</h1>
+            <p>Members and donors help us present new exhibitions, education programs, and accessible digital experiences. Explore the options below.</p>
+
+            <div class="accordion" id="supportAccordion">
+                <h2 class="accordion-heading">Membership tiers</h2>
+                <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-1" id="acc-btn-1">Individual membership</button>
+                <div class="accordion-panel" id="acc-panel-1" role="region" aria-labelledby="acc-btn-1">
+                    <p>Free unlimited admission, member previews, and discounts at the museum store. <a href="checkout.html">Buy tickets</a> anytime with your member benefits.</p>
+                </div>
+                <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-2" id="acc-btn-2">Student &amp; educator</button>
+                <div class="accordion-panel" id="acc-panel-2" role="region" aria-labelledby="acc-btn-2">
+                    <p>Discounted membership for students and educators with valid ID. Supports field trips and classroom resources.</p>
+                </div>
+                <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-3" id="acc-btn-3">Donate</button>
+                <div class="accordion-panel" id="acc-panel-3" role="region" aria-labelledby="acc-btn-3">
+                    <p>One-time or recurring gifts fund exhibitions and community programs. This demo site does not process donations; contact <a href="mailto:give@monomuse.example">give@monomuse.example</a> to learn more.</p>
+                </div>
+            </div>
+
+            <h2>Why support matters</h2>
+            <p>Philanthropy and membership directly support the high-converting experiences visitors seek—clear exhibition information, planning tools, and a smooth path to tickets.</p>
+        </main>
+        <figure class="main_figure">
+            <img id="logo" src="../static/monomuse-logo.svg" alt="MonoMuse Museum logo mark">
+        </figure>
+        <footer class="footer">
+            <div class="visitor-info">
+                <h2 class="footer-heading">Visitor information</h2>
+                <p><strong>Hours:</strong> Tue–Sun, 10:00 AM–6:00 PM</p>
+                <p><strong>Location:</strong> 123 Innovation Ave, Pittsburgh, PA</p>
+                <p><strong>Contact:</strong> <a href="mailto:hello@monomuse.example">hello@monomuse.example</a></p>
+            </div>
+            <p id="copyYear"></p>
+            <p class="attribution">UI interactions: jQuery (accordion). Fonts: Google Fonts (Roboto).</p>
+        </footer>
+    </div>
+</body>
+</html>
