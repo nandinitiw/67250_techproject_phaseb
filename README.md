@@ -137,7 +137,7 @@ Translated each finding into a concrete design decision:
 
 ## Why this project matters
 
-This was data analysis used to scope a build instead of simply building a website. Every UI decision in Phase B traces back to a specific number from Phase A's queries. That loop (instrument → query → diagnose → ship → re-justify) is the same one I use in production work.
+This was data analysis used to scope a build instead of simply building a website. Every UI decision in Phase B traces back to a specific number from Phase A's queries. 
 
 ## Stack
 
